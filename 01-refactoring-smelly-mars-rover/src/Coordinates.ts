@@ -1,18 +1,17 @@
 export class Coordinates {
-    private x: number;
-    private y: number;
+    private readonly x: number;
+    private readonly y: number;
 
     constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
 
     }
-
-    public getX() {
-        return this.x;
+    moveAlongY(displacement: number): Coordinates {
+        return new Coordinates(this.x, this.y + displacement);
     }
 
-    getY() {
-        return this.y;
+    moveAlongX(displacement: number): Coordinates {
+        return new Coordinates(this.x + displacement, this.y);
     }
 }

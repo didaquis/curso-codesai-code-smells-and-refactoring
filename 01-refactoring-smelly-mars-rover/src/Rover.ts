@@ -10,6 +10,7 @@ export class Rover {
         this.coordinates = new Coordinates(x, y);
         this.setDirection(direction);
     }
+
     private setDirection(direction: string) {
         this.direction = new Direction(direction);
     }
@@ -22,29 +23,27 @@ export class Rover {
 
                 // Rotate Rover
                 if (this.direction.isFacingNorth()) {
-                        this.setDirection("W");
+                    this.setDirection("W");
                 } else if (this.direction.isFacingSouth()) {
-                        this.setDirection("E");
+                    this.setDirection("E");
                 } else if (this.direction.isFacingWest()) {
-                        this.setDirection("S");
+                    this.setDirection("S");
                 } else {
                     this.setDirection("N");
                 }
-            }
-            else if (command === "r") {
+            } else if (command === "r") {
 
                 // Rotate Rover
                 if (this.direction.isFacingNorth()) {
-                        this.setDirection("E");
+                    this.setDirection("E");
                 } else if (this.direction.isFacingSouth()) {
-                        this.setDirection("W");
+                    this.setDirection("W");
                 } else if (this.direction.isFacingWest()) {
-                        this.setDirection("N");
+                    this.setDirection("N");
                 } else {
-                        this.setDirection("S");
+                    this.setDirection("S");
                 }
-            }
-            else {
+            } else {
 
                 // Displace Rover
                 let displacement1 = -1;
@@ -55,13 +54,13 @@ export class Rover {
                 let displacement = displacement1;
 
                 if (this.direction.isFacingNorth()) {
-                    this.coordinates = new Coordinates(this.coordinates.getX(), this.coordinates.getY() + displacement);
+                    this.coordinates = this.coordinates.moveAlongY(displacement);
                 } else if (this.direction.isFacingSouth()) {
-                    this.coordinates = new Coordinates(this.coordinates.getX(), this.coordinates.getY() - displacement);
+                    this.coordinates = this.coordinates.moveAlongY(-displacement);
                 } else if (this.direction.isFacingWest()) {
-                    this.coordinates = new Coordinates(this.coordinates.getX() - displacement, this.coordinates.getY());
+                    this.coordinates = this.coordinates.moveAlongX(-displacement);
                 } else {
-                    this.coordinates = new Coordinates(this.coordinates.getX() + displacement, this.coordinates.getY());
+                    this.coordinates = this.coordinates.moveAlongX(displacement);
                 }
             }
         }
