@@ -1,8 +1,7 @@
 import { Direction } from './Direction'
 export class Rover {
 
-    private direction: string;
-    private directionType: Direction;
+    private direction: Direction;
     private y: number;
     private x: number;
 
@@ -13,8 +12,7 @@ export class Rover {
     }
 
     private setDirection(direction: string) {
-        this.direction = direction;
-        this.directionType = new Direction(direction);
+        this.direction = new Direction(direction);
     }
 
     public receive(commandsSequence: string) {
@@ -24,11 +22,11 @@ export class Rover {
             if (command === "l") {
 
                 // Rotate Rover
-                if (this.direction === "N") {
+                if (this.direction.isFacingNorth()) {
                         this.setDirection("W");
-                } else if (this.direction === "S") {
+                } else if (this.direction.isFacingSouth()) {
                         this.setDirection("E");
-                } else if (this.direction === "W") {
+                } else if (this.direction.isFacingWest()) {
                         this.setDirection("S");
                 } else {
                     this.setDirection("N");
@@ -37,11 +35,11 @@ export class Rover {
             else if (command === "r") {
 
                 // Rotate Rover
-                if (this.direction === "N") {
+                if (this.direction.isFacingNorth()) {
                         this.setDirection("E");
-                } else if (this.direction === "S") {
+                } else if (this.direction.isFacingSouth()) {
                         this.setDirection("W");
-                } else if (this.direction === "W") {
+                } else if (this.direction.isFacingWest()) {
                         this.setDirection("N");
                 } else {
                         this.setDirection("S");
@@ -57,11 +55,11 @@ export class Rover {
                 }
                 let displacement = displacement1;
 
-                if (this.direction === "N") {
+                if (this.direction.isFacingNorth()) {
                     this.y += displacement;
-                } else if (this.direction === "S") {
+                } else if (this.direction.isFacingSouth()) {
                     this.y -= displacement;
-                } else if (this.direction === "W") {
+                } else if (this.direction.isFacingWest()) {
                     this.x -= displacement;
                 } else {
                     this.x += displacement;
