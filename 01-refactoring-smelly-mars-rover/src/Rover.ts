@@ -1,13 +1,20 @@
+import { Direction } from './Direction'
 export class Rover {
 
     private direction: string;
+    private directionType: Direction;
     private y: number;
     private x: number;
 
     constructor(x: number, y: number, direction: string) {
         this.x = x;
         this.y = y;
+        this.setDirection(direction);
+    }
+
+    private setDirection(direction: string) {
         this.direction = direction;
+        this.directionType = new Direction(direction);
     }
 
     public receive(commandsSequence: string) {
@@ -18,26 +25,26 @@ export class Rover {
 
                 // Rotate Rover
                 if (this.direction === "N") {
-                        this.direction = "W";
+                        this.setDirection("W");
                 } else if (this.direction === "S") {
-                        this.direction = "E";
+                        this.setDirection("E");
                 } else if (this.direction === "W") {
-                        this.direction = "S";
+                        this.setDirection("S");
                 } else {
-                    this.direction = "N";
+                    this.setDirection("N");
                 }
             }
             else if (command === "r") {
 
                 // Rotate Rover
                 if (this.direction === "N") {
-                        this.direction = "E";
+                        this.setDirection("E");
                 } else if (this.direction === "S") {
-                        this.direction = "W";
+                        this.setDirection("W");
                 } else if (this.direction === "W") {
-                        this.direction = "N";
+                        this.setDirection("N");
                 } else {
-                        this.direction = "S";
+                        this.setDirection("S");
                 }
             }
             else {
@@ -62,5 +69,4 @@ export class Rover {
             }
         }
     }
-
 }
