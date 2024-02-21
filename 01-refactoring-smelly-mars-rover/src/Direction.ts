@@ -1,13 +1,6 @@
 import {Coordinates} from "./Coordinates";
 
 export abstract class Direction {
-
-    private readonly direction: string;
-
-    protected constructor(direction: string) {
-     this.direction = direction;
-    }
-
     static create(direction: string): Direction {
         if ( direction === "N") {
             return new NorthDirection();
@@ -29,11 +22,6 @@ export abstract class Direction {
 }
 
 class NorthDirection extends Direction {
-
-    constructor() {
-        super("N");
-    }
-
     rotateLeft(): Direction {
         return Direction.create("W");
     }
@@ -49,12 +37,6 @@ class NorthDirection extends Direction {
 }
 
 class SouthDirection extends Direction {
-
-    constructor() {
-        super("S");
-    }
-
-
     rotateLeft(): Direction {
         return Direction.create("E");
     }
@@ -70,12 +52,6 @@ class SouthDirection extends Direction {
 }
 
 class WestDirection extends Direction {
-
-    constructor() {
-        super("W");
-    }
-
-
     rotateLeft(): Direction {
         return Direction.create("S");
     }
@@ -92,12 +68,6 @@ class WestDirection extends Direction {
 }
 
 class EastDirection extends Direction {
-
-    constructor() {
-        super("E");
-    }
-
-
     rotateLeft(): Direction {
         return Direction.create("N");
     }

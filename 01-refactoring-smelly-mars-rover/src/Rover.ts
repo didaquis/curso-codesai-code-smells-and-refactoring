@@ -10,28 +10,37 @@ export class Rover {
         this.coordinates = new Coordinates(x, y);
         this.direction = Direction.create(direction);
     }
+
+    private displacement = 1;
+
     public receive(commandsSequence: string) {
+        this.executeCommands(this.extractCommands(commandsSequence));
+    }
+
+    private executeCommands(commands: string[]) {
+        commands.forEach((command) => {
+            this.executeCommand(command);
+        });
+    }
+
+    private extractCommands(commandsSequence: string) {
+        const commands = [];
         for (let i = 0; i < commandsSequence.length; ++i) {
             const command = commandsSequence.substring(i, i + 1);
+            commands.push(command);
+        }
+        return commands;
+    }
 
-            if (command === "l") {
-
-                this.direction = this.direction.rotateLeft();
-            } else if (command === "r") {
-
-                this.direction = this.direction.rotateRight();
-            } else {
-
-                // Displace Rover
-                let displacement1 = -1;
-
-                if (command === "f") {
-                    displacement1 = 1;
-                }
-                let displacement = displacement1;
-                this.coordinates = this.direction.move(displacement, this.coordinates)
-
-            }
+    private executeCommand(command: string) {
+        if (command === "l") {
+            this.direction = this.direction.rotateLeft();
+        } else if (command === "r") {
+            this.direction = this.direction.rotateRight();
+        } else if (command === "f") {
+            this.coordinates = this.direction.move(this.displacement, this.coordinates);
+        } else {
+            this.coordinates = this.direction.move(-this.displacement, this.coordinates);
         }
     }
 }
