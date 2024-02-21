@@ -13,3 +13,6 @@ También encontrarás un directorio llamado "smells-and-their-solutions" con doc
 
 ## A modern classification of code smells
 * ![Code Smells map](https://codesai.com/assets/code_smells_wake_map.png)
+
+## A modern classification of refactorings
+* ![refactorings map](./images/refactoring_edicion_2.jpeg)
