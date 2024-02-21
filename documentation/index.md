@@ -1,7 +1,7 @@
 # Course documentation
 
 ## Slides
-En este mismo directorio puedes encontrar las slides del curso.
+En el directorio "slides" puedes encontrar las slides del curso.
 
 También encontrarás un directorio llamado "smells-and-their-solutions" con documentos que relacionan síntomas con code smells y code smells con los refactors que te pueden ayudar a solucionarlos.
 
