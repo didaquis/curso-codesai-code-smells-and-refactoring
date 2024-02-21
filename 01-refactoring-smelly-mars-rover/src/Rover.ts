@@ -23,8 +23,8 @@ export class Rover {
         });
     }
 
-    private extractCommands(commandsSequence: string) {
-        const commands = [];
+    private extractCommands(commandsSequence: string): string[] {
+        const commands: string[] = [];
         for (let i = 0; i < commandsSequence.length; ++i) {
             const command = commandsSequence.substring(i, i + 1);
             commands.push(command);
