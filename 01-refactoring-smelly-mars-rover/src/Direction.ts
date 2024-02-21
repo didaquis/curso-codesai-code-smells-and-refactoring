@@ -17,4 +17,8 @@ export class Direction {
     public isFacingWest() {
         return this.direction === "W";
     }
+
+    static create(direction: string): Direction {
+        return new Direction(direction);
+    }
 }

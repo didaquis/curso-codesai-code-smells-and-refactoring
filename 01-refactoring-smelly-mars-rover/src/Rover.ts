@@ -12,7 +12,7 @@ export class Rover {
     }
 
     private setDirection(direction: string) {
-        this.direction = new Direction(direction);
+        this.direction = Direction.create(direction);
     }
 
     public receive(commandsSequence: string) {
