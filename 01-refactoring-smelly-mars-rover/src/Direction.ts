@@ -1,3 +1,5 @@
+import {Coordinates} from "./Coordinates";
+
 export abstract class Direction {
 
     private direction: string;
@@ -34,6 +36,8 @@ export abstract class Direction {
     abstract rotateLeft(): Direction
 
     abstract rotateRight(): Direction
+
+    abstract move(displacement: number, coordinates: Coordinates): Coordinates
 }
 
 class NorthDirection extends Direction {
@@ -48,6 +52,11 @@ class NorthDirection extends Direction {
 
     rotateRight(): Direction {
         return Direction.create("E");
+    }
+
+
+    move(displacement: number, coordinates: Coordinates): Coordinates {
+        return coordinates.moveAlongY(displacement);
     }
 }
 
@@ -66,6 +75,10 @@ class SouthDirection extends Direction {
     rotateRight(): Direction {
         return Direction.create("W");
     }
+
+    move(displacement: number, coordinates: Coordinates): Coordinates {
+        return coordinates.moveAlongY(-displacement);
+    }
 }
 
 class WestDirection extends Direction {
@@ -83,6 +96,11 @@ class WestDirection extends Direction {
     rotateRight(): Direction {
         return Direction.create("N");
     }
+
+
+    move(displacement: number, coordinates: Coordinates): Coordinates {
+        return coordinates.moveAlongX(-displacement);
+    }
 }
 
 class EastDirection extends Direction {
@@ -99,5 +117,10 @@ class EastDirection extends Direction {
 
     rotateRight(): Direction {
         return Direction.create("S");
+    }
+
+
+    move(displacement: number, coordinates: Coordinates): Coordinates {
+        return coordinates.moveAlongX(displacement);
     }
 }

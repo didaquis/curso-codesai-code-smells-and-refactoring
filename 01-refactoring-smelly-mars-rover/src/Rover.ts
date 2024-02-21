@@ -19,7 +19,7 @@ export class Rover {
                 this.direction = this.direction.rotateLeft();
             } else if (command === "r") {
 
-                this.direction = this.rotateRight();
+                this.direction = this.direction.rotateRight();
             } else {
 
                 // Displace Rover
@@ -29,21 +29,9 @@ export class Rover {
                     displacement1 = 1;
                 }
                 let displacement = displacement1;
+                this.coordinates = this.direction.move(displacement, this.coordinates)
 
-                if (this.direction.isFacingNorth()) {
-                    this.coordinates = this.coordinates.moveAlongY(displacement);
-                } else if (this.direction.isFacingSouth()) {
-                    this.coordinates = this.coordinates.moveAlongY(-displacement);
-                } else if (this.direction.isFacingWest()) {
-                    this.coordinates = this.coordinates.moveAlongX(-displacement);
-                } else {
-                    this.coordinates = this.coordinates.moveAlongX(displacement);
-                }
             }
         }
-    }
-
-    private rotateRight() {
-        return this.direction.rotateRight();
     }
 }
