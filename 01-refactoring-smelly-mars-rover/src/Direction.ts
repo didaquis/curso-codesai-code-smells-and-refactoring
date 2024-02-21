@@ -1,8 +1,8 @@
-export class Direction {
+export abstract class Direction {
 
     private direction: string;
 
-    constructor(direction: string) {
+    protected constructor(direction: string) {
      this.direction = direction;
     }
 
@@ -19,6 +19,64 @@ export class Direction {
     }
 
     static create(direction: string): Direction {
-        return new Direction(direction);
+        if ( direction === "N") {
+            return new NorthDirection();
+        }
+        if ( direction === "S") {
+            return new SouthDirection();
+        }
+        if ( direction === "W") {
+            return new WestDirection();
+        }
+        return new EastDirection();
+    }
+
+    abstract rotateLeft(): Direction
+}
+
+class NorthDirection extends Direction {
+
+    constructor() {
+        super("N");
+    }
+
+    rotateLeft(): Direction {
+        return Direction.create("W");
+    }
+}
+
+class SouthDirection extends Direction {
+
+    constructor() {
+        super("S");
+    }
+
+
+    rotateLeft(): Direction {
+        return Direction.create("E");
+    }
+}
+
+class WestDirection extends Direction {
+
+    constructor() {
+        super("W");
+    }
+
+
+    rotateLeft(): Direction {
+        return Direction.create("S");
+    }
+}
+
+class EastDirection extends Direction {
+
+    constructor() {
+        super("E");
+    }
+
+
+    rotateLeft(): Direction {
+        return Direction.create("N");
     }
 }
