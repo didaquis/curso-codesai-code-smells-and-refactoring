@@ -1,9 +1,9 @@
 # Course documentation
 
 ## Slides
-En el directorio "slides" puedes encontrar las slides del curso.
+In the "slides" directory you can find the course slides.
 
-También encontrarás un directorio llamado "smells-and-their-solutions" con documentos que relacionan síntomas con code smells y code smells con los refactors que te pueden ayudar a solucionarlos.
+You will also find a directory called "smells-and-their-solutions" with documents that relate symptoms to code smells and code smells to refactors that can help you solve them.
 
 ## Interesting links
 * [Artículo: De taxonomías y catálogos de code smells](https://codesai.com/posts/2022/09/code-smells-taxonomies-and-catalogs)
