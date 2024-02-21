@@ -10,9 +10,12 @@ In the "slides" directory you can find the course slides.
 * [PDF: A list of symptoms and the associated code smells](./smells-and-their-solutions/wake_symptoms_and_smells.pdf)
 * [PDF: A list of code smells and their associated refactorings](./smells-and-their-solutions/wake_smells_to_refactorings.pdf)
 * [PDF: Another list of code smells and their associated refactorings](./smells-and-their-solutions/wake_smells_to_refactorings.pdf)
+* [Refactoring.Guru: a list of code smells](https://refactoring.guru/refactoring/smells)
+* [Refactoring.Guru: a list of refactorings](https://refactoring.guru/refactoring/techniques)
 
 ## More interesting links
 * [Naming as a Process](https://www.digdeeproots.com/articles/on/naming-process/)
+* [Code smells mindmap connected to Jerzyk's catalog](https://www.mindmeister.com/app/map/3025490820?t=nCw69SqYKL) (created by [Daniel Ramos](https://twitter.com/DanielRamosAcos))
 
 ## A modern classification of code smells
 * ![Code Smells map](https://codesai.com/assets/code_smells_wake_map.png)
