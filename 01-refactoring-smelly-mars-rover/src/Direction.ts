@@ -2,22 +2,10 @@ import {Coordinates} from "./Coordinates";
 
 export abstract class Direction {
 
-    private direction: string;
+    private readonly direction: string;
 
     protected constructor(direction: string) {
      this.direction = direction;
-    }
-
-    public isFacingNorth() {
-        return this.direction === "N";
-    }
-
-    public isFacingSouth() {
-        return this.direction === "S";
-    }
-
-    public isFacingWest() {
-        return this.direction === "W";
     }
 
     static create(direction: string): Direction {
