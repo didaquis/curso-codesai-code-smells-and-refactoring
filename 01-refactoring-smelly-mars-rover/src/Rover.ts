@@ -5,13 +5,12 @@ export class Rover {
 
     private direction: Direction;
     private coordinates: Coordinates;
+    private displacement: number = 1;
 
     constructor(x: number, y: number, direction: string) {
         this.coordinates = new Coordinates(x, y);
         this.direction = Direction.create(direction);
     }
-
-    private displacement = 1;
 
     public receive(commandsSequence: string) {
         this.executeCommands(this.extractCommands(commandsSequence));
@@ -24,12 +23,7 @@ export class Rover {
     }
 
     private extractCommands(commandsSequence: string): string[] {
-        const commands: string[] = [];
-        for (let i = 0; i < commandsSequence.length; ++i) {
-            const command = commandsSequence.substring(i, i + 1);
-            commands.push(command);
-        }
-        return commands;
+        return commandsSequence.split("");
     }
 
     private executeCommand(command: string) {
