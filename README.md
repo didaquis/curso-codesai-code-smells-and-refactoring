@@ -2,7 +2,7 @@
 
 ## Slides
 1. [Introduction](./documentation/slides/1_Introduction.pdf)
-2. [Code Smells within classes](documentation%2Fslides%2F2_Code_Smells_within_classes.pdf)
+2. [Code Smells within classes](documentation/slides/2_Code_Smells_within_classes.pdf)
 3. Code Smells between classes
    * [Code Smells between classes part 1](documentation/slides/3a_Code_Smells_between_classes.pdf)
    * [Code Smells between classes part 2](documentation/slides/3b_Code_Smells_between_classes.pdf)
@@ -26,7 +26,18 @@
 * [Refactoring.Guru: a list of code smells](https://refactoring.guru/refactoring/smells)
 * [Refactoring.Guru: a list of refactorings](https://refactoring.guru/refactoring/techniques)
 
-## More interesting links
+## Thoughts
+* Un code smell es un indicador de un potencial problema, no necesariamente un problema.
+* Una clase es grande no cuando tiene muchas líneas de código, sino cuando tiene múltiples responsabilidades. Dicho de otra forma, cuando tiene distintos motivos para cambiar.
+* A veces hay que color juntas aquellas partes del software que cambian juntas. Esto puede ser señal de que comparten la misma responsabilidad.
+* Ten en cuenta que cuando hablamos del comportamiento de una clase, obviamos lo que ocurre en el constructor. Esto es porque el código que hay en el constructor se ejecuta antes de que exista el objeto de esa instancia. Cuando nos referimos al comportamiento de un objeto, nos referimos al comportamiento que tiene ese objeto una vez está creado.
+* Es más probable que cambie el "cómo" lo hacemos que el "qué" hacemos. Por tanto, tiene sentido que cuando escribímos código nos protejamos contra cambios en el "cómo". 
+  * Por ejemplo, podemos utilizar polimorfismo para encapsular en distintos objetos distintos comportamientos. Es decir, tiene sentido crear una interfaz que debe ser implementado en un método de pago ya que es altamente probable que más adelante tengamos distintos métodos de pago o estos cambien. Sin embargo, es poco probable que dejemos de necesitar ningún método de pago. Fíjate que es posible que cambiemos "cómo" se paga, pero improbable que quitemos la necesidad de pagar (el "qué").
+  * La mera existencia de las interfaces ya nos ayudan a esto, ya que dictaminan los contratos que se utilizarán para hacer el "qué", pero no especifican el "cómo".
+* A menudo es bueno preguntarse: ¿cuántas razones de cambio tiene este código?. Si una función debe ser modificada por dos razones distintas, claramente estamos haciendo algo mal. 
+* Recuerda que dos bloques de código iguales no necesariamente deben de ser transformados a una abstractión para evitar repetir código. Aunque el código sea idéntico, vale la pena hacerse esta pregunta: ¿estos dos bloques de código comparten las mismas razones de cambio? Si la respuesta es no, ahí no hay duplicidad a corregir.
+
+## Related links
 * [Naming as a Process](https://www.digdeeproots.com/articles/on/naming-process/)
 * [DRY is about Knowledge. Code duplication is not the issue](https://verraes.net/2014/08/dry-is-about-knowledge/)
 * [Aplicación del principio DRY](https://www.eferro.net/2015/05/aplicacion-del-principio-dry.html)
