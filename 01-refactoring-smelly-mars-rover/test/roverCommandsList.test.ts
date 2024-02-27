@@ -2,28 +2,28 @@ import {Rover} from '../src/Rover';
 
 describe('Rover Commands List', () => {
 
-  it('no commands', () => {
-    const rover = new Rover(0, 0, "N");
+    it('no commands', () => {
+        const rover = new Rover(0, 0, "N");
 
-    rover.receive("");
+        rover.receive("");
 
-    expect(new Rover(0, 0, "N")).toEqual(rover);
-  });
+        expect(new Rover(0, 0, "N")).toEqual(rover);
+    });
 
-  it('two commands', () => {
-    const rover = new Rover(0, 0, "N");
+    it('two commands', () => {
+        const rover = new Rover(0, 0, "N");
 
-    rover.receive("lf");
+        rover.receive("lf");
 
-    expect(new Rover(-1, 0, "W")).toEqual(rover);
-  });
+        expect(new Rover(-1, 0, "W")).toEqual(rover);
+    });
 
-  it('many commands', () => {
-    const rover = new Rover(0, 0, "N");
+    it('many commands', () => {
+        const rover = new Rover(0, 0, "N");
 
-    rover.receive("ffrbbrfflff");
+        rover.receive("ffrbbrfflff");
 
-    expect(new Rover(0, 0, "E")).toEqual(rover);
-  });
+        expect(new Rover(0, 0, "E")).toEqual(rover);
+    });
 
 });

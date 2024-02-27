@@ -2,13 +2,13 @@ import {Coordinates} from "./Coordinates";
 
 export abstract class Direction {
     static create(direction: string): Direction {
-        if ( direction === "N") {
+        if (direction === "N") {
             return new NorthDirection();
         }
-        if ( direction === "S") {
+        if (direction === "S") {
             return new SouthDirection();
         }
-        if ( direction === "W") {
+        if (direction === "W") {
             return new WestDirection();
         }
         return new EastDirection();

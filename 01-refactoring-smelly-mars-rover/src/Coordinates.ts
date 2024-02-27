@@ -6,6 +6,7 @@ export class Coordinates {
         this.x = x;
         this.y = y;
     }
+
     moveAlongY(displacement: number): Coordinates {
         return new Coordinates(this.x, this.y + displacement);
     }
