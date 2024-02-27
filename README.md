@@ -1,19 +1,17 @@
 # Curso Codesai: code smells and refactoring
 
 ## Slides
-In the "documentation/slides" directory you can find the course slides.
-
 1. [Introduction](./documentation/slides/1_Introduction.pdf)
 2. [Code Smells within classes](documentation%2Fslides%2F2_Code_Smells_within_classes.pdf)
 3. Code Smells between classes
-   * [Code Smells between classes part 1](documentation%2Fslides%2F3a_Code_Smells_between_classes.pdf)
-   * [Code Smells between classes part 2](documentation%2Fslides%2F3b_Code_Smells_between_classes.pdf)
+   * [Code Smells between classes part 1](documentation/slides/3a_Code_Smells_between_classes.pdf)
+   * [Code Smells between classes part 2](documentation/slides/3b_Code_Smells_between_classes.pdf)
 4. Refactorings
-   * [Patterns of Refactoring](documentation%2Fslides%2F4a_Patterns_of_Refactoring.pdf)
-   * [Core Refactorings](documentation%2Fslides%2F4b_Core_Refactorings.pdf)
-5. [Good Enough Design](documentation%2Fslides%2F5_Good_Enough_Design.pdf)
-6. [Hexagonal Architecture](documentation%2Fslides%2F6_Hexagonal_Architecture.pdf)
-7. [Workflows and Economics of Refactoring](documentation%2Fslides%2F7_Workflows_and_Economics_of_Refactoring.pdf)
+   * [Patterns of Refactoring](documentation/slides/4a_Patterns_of_Refactoring.pdf)
+   * [Core Refactorings](documentation/slides/4b_Core_Refactorings.pdf)
+5. [Good Enough Design](documentation/slides/5_Good_Enough_Design.pdf)
+6. [Hexagonal Architecture](documentation/slides/6_Hexagonal_Architecture.pdf)
+7. [Workflows and Economics of Refactoring](documentation/slides/7_Workflows_and_Economics_of_Refactoring.pdf)
 
 ## Katas
 * [Refactoring smelly mars rover](./katas/refactoring-smelly-mars-rover)
