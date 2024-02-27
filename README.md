@@ -1,7 +1,9 @@
 # Curso Codesai: code smells and refactoring
 
 ## Slides
-In the "slides" directory you can find the course slides.
+In the "documentation/slides" directory you can find the course slides.
+
+[Introduction](./documentation/slides/1_Introduction.pdf)
 
 ## Katas
 * [Refactoring smelly mars rover](./katas/refactoring-smelly-mars-rover)
