@@ -28,7 +28,17 @@
 
 ## More interesting links
 * [Naming as a Process](https://www.digdeeproots.com/articles/on/naming-process/)
+* [DRY is about Knowledge. Code duplication is not the issue](https://verraes.net/2014/08/dry-is-about-knowledge/)
+* [Aplicación del principio DRY](https://www.eferro.net/2015/05/aplicacion-del-principio-dry.html)
 * [Code smells mindmap connected to Jerzyk's catalog](https://www.mindmeister.com/app/map/3025490820?t=nCw69SqYKL) (created by [Daniel Ramos](https://twitter.com/DanielRamosAcos))
+* 📺 [Clean Architecture: La mejor forma de escalar y mantener tu código](https://www.youtube.com/watch?v=y3MWfPDmVqo)
+* [Dependency Inversion Principle in the wild](https://martinfowler.com/articles/dipInTheWild.html)
+* [Arquitectura Hexagonal
+  (Traducción al español del patrón "Ports and Adapters", de Alistair Cockburn)](https://jmgarridopaz.github.io/content/arquitecturahexagonal.html)
+* [Hexagonal Architecture - What Is It? Why Should You Use It?](https://www.happycoders.eu/software-craftsmanship/hexagonal-architecture/)
+* [Ports and Adapters architecture](https://herbertograca.com/2017/09/14/ports-adapters-architecture/)
+* [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+* [Ejemplo de clean architecture que usa ports & adapters (arquitectura hexagonal) para separarse de la infraestructura - Repositorio de código del libro Get Your Hands Dirty on Clean Architecture](https://github.com/thombergs/buckpal)
 
 ## A modern classification of code smells
 ![Code Smells map](documentation/images/code_smells_wake_map.png)
