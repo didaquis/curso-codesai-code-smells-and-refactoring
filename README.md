@@ -21,7 +21,7 @@ In the "slides" directory you can find the course slides.
 * [Code smells mindmap connected to Jerzyk's catalog](https://www.mindmeister.com/app/map/3025490820?t=nCw69SqYKL) (created by [Daniel Ramos](https://twitter.com/DanielRamosAcos))
 
 ## A modern classification of code smells
-* ![Code Smells map](https://codesai.com/assets/code_smells_wake_map.png)
+![Code Smells map](documentation/images/code_smells_wake_map.png)
 
 ## A modern classification of refactorings
-* ![refactorings map](documentation/images/refactoring_edicion_2.jpeg)
+![refactorings map](documentation/images/refactoring_edicion_2.jpeg)
