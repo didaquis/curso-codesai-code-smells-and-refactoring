@@ -36,6 +36,8 @@
   * La mera existencia de las interfaces ya nos ayudan a esto, ya que dictaminan los contratos que se utilizarán para hacer el "qué", pero no especifican el "cómo".
 * A menudo es bueno preguntarse: ¿cuántas razones de cambio tiene este código?. Si una función debe ser modificada por dos razones distintas, claramente estamos haciendo algo mal. 
 * Recuerda que dos bloques de código iguales no necesariamente deben de ser transformados a una abstractión para evitar repetir código. Aunque el código sea idéntico, vale la pena hacerse esta pregunta: ¿estos dos bloques de código comparten las mismas razones de cambio? Si la respuesta es no, ahí no hay duplicidad a corregir.
+* Cuando se usa Arquitectura Hexagonal (ports and adapters) observa que los "acceptance test" testean el "qué" hace la aplicación, pero no el "cómo" lo hace. Sin embargo los test unitarios si se encargan de testear los detalles del "cómo" lo hace.
+* En Arquitectura Hexagonal (ports and adapters), un "port" es una abstracción de dominio. Es decir, una interfaz. Por ejemplo "UserRepository". Sin embargo, un "adapter" es una implementación de un puerto. Por ejemplo "MySQLUserRepository". Por tanto, un mismo puerto define un contrato que múltiples adapters implementarán.
 
 ## Related links
 * [Naming as a Process](https://www.digdeeproots.com/articles/on/naming-process/)
