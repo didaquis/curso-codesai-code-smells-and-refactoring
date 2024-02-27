@@ -10,6 +10,8 @@ and to fix them applying some useful refactorings.
 
 Video to solve this kata Step by Step: https://www.youtube.com/playlist?list=PL9TlRsoJAtQZChSQicJzUzF49zbadBtI8
 
+The unsolved kata can be obtained [here](../code-smells-refactoring-training-ts.zip).
+
 -------
 
 This is a summary of the behavior of the rover that was implemented:
