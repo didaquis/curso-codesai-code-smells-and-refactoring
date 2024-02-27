@@ -1,4 +1,4 @@
-Smelly Mars Rover code refactoring
+Smelly Mars Rover code refactoring (kata solved)
 =============================================
 
 Smelly Mars Rover code to practice refactoring.
