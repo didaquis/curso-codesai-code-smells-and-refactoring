@@ -59,6 +59,8 @@
 * [Code smells mindmap connected to Jerzyk's catalog](https://www.mindmeister.com/app/map/3025490820?t=nCw69SqYKL) (created by [Daniel Ramos](https://twitter.com/DanielRamosAcos))
 * 📺 [Clean Architecture: La mejor forma de escalar y mantener tu código](https://www.youtube.com/watch?v=y3MWfPDmVqo)
 * [Dependency Inversion Principle in the wild](https://martinfowler.com/articles/dipInTheWild.html)
+* [Tell, Don’t Ask](./documentation/articles/tell_do_not_ask.pdf)
+* [Ley de Demeter : No hables con extraños](./documentation/articles/ley-de-demeter.pdf)
 * [Arquitectura Hexagonal
   (Traducción al español del patrón "Ports and Adapters", de Alistair Cockburn)](https://jmgarridopaz.github.io/content/arquitecturahexagonal.html)
 * [Hexagonal Architecture - What Is It? Why Should You Use It?](https://www.happycoders.eu/software-craftsmanship/hexagonal-architecture/)
